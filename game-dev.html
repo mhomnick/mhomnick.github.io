@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Dev — Mike Homnick</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <nav id="nav">
+    <a href="index.html" class="nav-logo">Mike Homnick</a>
+    <div class="nav-links">
+      <a href="index.html#work">Work</a>
+      <div class="nav-dropdown">
+        <span class="nav-dropdown-trigger">Side Projects</span>
+        <div class="nav-dropdown-menu">
+          <div class="nav-dropdown-menu-inner">
+            <a href="game-dev.html">Game Dev</a>
+            <a href="photography.html">Photography</a>
+            <a href="music.html">Music</a>
+          </div>
+        </div>
+      </div>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="cs-hero">
+    <div class="cs-hero-inner">
+      <p class="cs-eyebrow reveal">Side Project</p>
+      <h1 class="cs-title reveal">Developing<br><em>a Game</em></h1>
+      <p class="cs-hero-sub reveal">Experimenting with UI and a unique research tree</p>
+
+    </div>
+  </header>
+
+  <!-- Hero image -->
+  <div class="cs-img-full reveal">
+    <img src="images/gamedev/hero-asset.gif" alt="Same Sky — Game Hero" class="cs-img-real cs-img-centered" style="width: 50%;">
+  </div>
+
+  <!-- ===================== CONTENT ===================== -->
+  <main class="cs-body">
+
+    <!-- 01 · Overview -->
+    <section class="cs-section reveal">
+      <div class="cs-section-label">
+        <span class="section-num">01</span>
+        <span class="section-label">Overview</span>
+      </div>
+      <div class="cs-section-content">
+        <h2 class="cs-heading">Building something from scratch</h2>
+        <p>In 2013, a friend and I began creating a video game despite having no prior experience in programming or 3D modeling. The game, tentatively titled "Same Sky," is a real-time strategy planetary defense game with role-playing elements.</p>
+        <p>Players defend a planet's atmosphere from attacking aliens by launching upgradable missiles, controlling and modifying asteroids, and placing defense satellites — all while riding a retro-futuristic monorail circling the entire planet.</p>
+
+        <div class="cs-cards">
+          <div class="cs-card">
+            <h4>Core Loop</h4>
+            <p>Collect debris from destroyed aliens as currency, research upgrades, and construct facilities like missile factories and atmosphere restoration pumps to survive increasingly intense waves.</p>
+          </div>
+          <div class="cs-card">
+            <h4>Replayability</h4>
+            <p>Expected playthroughs last 30–40 minutes, similar to roguelike games. Every run plays differently depending on which research path you take.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image -->
+    <div class="cs-img-full reveal">
+      <img src="images/gamedev/samesky.webp" alt="Same Sky — Gameplay" class="cs-img-real cs-img-centered" style="width: 25%;">
+    </div>
+
+    <!-- Lighting tests -->
+    <div class="cs-img-3up reveal">
+      <img src="images/gamedev/lightingtest1.webp" alt="Lighting Test 1" class="cs-img-real">
+      <img src="images/gamedev/lightingtest2.webp" alt="Lighting Test 2" class="cs-img-real">
+      <img src="images/gamedev/lighingtest.webp" alt="Lighting Test" class="cs-img-real">
+    </div>
+
+    <!-- 02 · UI Design -->
+    <section class="cs-section reveal">
+      <div class="cs-section-label">
+        <span class="section-num">02</span>
+        <span class="section-label">UI Design</span>
+      </div>
+      <div class="cs-section-content">
+        <h2 class="cs-heading">Experimenting with game UI</h2>
+        <p>I focused my efforts on designing the user interface, using it as an opportunity to experiment with patterns I wouldn't typically explore in product design.</p>
+        <ul class="cs-list">
+          <li>Large, simple typography for displaying resource information at a glance</li>
+          <li>Visual feedback showing money accumulating as debris is salvaged in real time</li>
+          <li>Color flashes when modules are gained</li>
+          <li>Simple icon representations of game objects</li>
+          <li>Info box overlays appearing on mouseover with detailed object information</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- UI image pair -->
+    <div class="cs-img-pair reveal">
+      <img src="images/gamedev/UI.gif" alt="UI — Resource Display" class="cs-img-real">
+      <img src="images/gamedev/explosion.gif" alt="Explosion Effect" class="cs-img-real">
+    </div>
+
+    <!-- 03 · Research Tree -->
+    <section class="cs-section reveal">
+      <div class="cs-section-label">
+        <span class="section-num">03</span>
+        <span class="section-label">Research Tree</span>
+      </div>
+      <div class="cs-section-content">
+        <h2 class="cs-heading">Designing a unique research tree</h2>
+        <p>The research tree was the most interesting design challenge on the project. Rather than a linear upgrade path, I designed a Venn diagram structure with three overlapping colored sections — each representing a distinct playstyle.</p>
+
+        <div class="cs-findings">
+          <div class="cs-finding">
+            <span class="cs-finding-num" style="color: rgba(220,50,50,0.4);">●</span>
+            <p><strong style="color: var(--text);">Red — Monorail & Missiles.</strong> Upgrades focused on offensive capabilities and mobility along the planet's surface.</p>
+          </div>
+          <div class="cs-finding">
+            <span class="cs-finding-num" style="color: rgba(200,180,50,0.4);">●</span>
+            <p><strong style="color: var(--text);">Yellow — Salvage & Buildings.</strong> Upgrades focused on economy, resource collection, and base construction.</p>
+          </div>
+          <div class="cs-finding">
+            <span class="cs-finding-num" style="color: rgba(50,100,220,0.4);">●</span>
+            <p><strong style="color: var(--text);">Blue — Defense Satellites.</strong> Upgrades focused on passive planetary defense systems.</p>
+          </div>
+        </div>
+
+        <p style="margin-top: 32px;">Players start with one top-level upgrade in each color. Researching first-tier upgrades unlocks additional connected nodes, while overlapping sections contain advanced perks that reward combined playstyles — giving every run a meaningfully different feel.</p>
+      </div>
+    </section>
+
+    <!-- Research tree image -->
+    <div class="cs-img-full reveal">
+      <img src="images/gamedev/researchtree.webp" alt="Research Tree — Venn Diagram Structure" class="cs-img-real cs-img-centered" style="width: 50%;">
+    </div>
+
+  </main>
+
+  <!-- Footer nav -->
+  <div class="cs-next reveal">
+    <a href="index.html#work" class="cs-back">← All Work</a>
+    <a href="photography.html" class="cs-next-project">
+      <span class="cs-next-label">Next Side Project</span>
+      <span class="cs-next-title">Photography →</span>
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

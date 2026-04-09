@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Building Chime's Comms Strategy — Mike Homnick</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- Navigation -->
+  <nav id="nav">
+    <a href="index.html" class="nav-logo">Mike Homnick</a>
+    <div class="nav-links">
+      <a href="index.html#work">Work</a>
+      <div class="nav-dropdown">
+        <span class="nav-dropdown-trigger">Side Projects</span>
+        <div class="nav-dropdown-menu">
+          <div class="nav-dropdown-menu-inner">
+            <a href="game-dev.html">Game Dev</a>
+            <a href="photography.html">Photography</a>
+            <a href="music.html">Music</a>
+          </div>
+        </div>
+      </div>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="cs-hero">
+    <div class="cs-hero-inner">
+      <p class="cs-eyebrow reveal">Case Study · Chime · 2024</p>
+      <h1 class="cs-title reveal">Building Chime's<br><em>Comms Strategy</em></h1>
+      <div class="cs-meta reveal">
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Role</span>
+          <span class="cs-meta-value">Lead Product Designer</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Team</span>
+          <span class="cs-meta-value">Small tiger team across Design, Marketing, and Product</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">My Work</span>
+          <span class="cs-meta-value">System Design, Prototyping, Documentation, XFN Communication</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Scope</span>
+          <span class="cs-meta-value">Company-wide comms system covering tens of millions of members</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero image -->
+  <div class="cs-img-4up reveal">
+    <img src="images/comms/Solution 1.png" alt="Solution 1" class="cs-img-real">
+    <img src="images/comms/Solution 2.png" alt="Solution 2" class="cs-img-real">
+    <img src="images/comms/Solution 3.png" alt="Solution 3" class="cs-img-real">
+    <img src="images/comms/Solution 4.png" alt="Solution 4" class="cs-img-real">
+  </div>
+
+  <!-- ===================== CONTENT ===================== -->
+  <main class="cs-body">
+
+    <!-- 01 · The Problem -->
+    <section class="cs-section reveal">
+      <div class="cs-section-label">
+        <span class="section-num">01</span>
+        <span class="section-label">The Problem</span>
+      </div>
+      <div class="cs-section-content">
+        <h2 class="cs-heading">Communications at scale break down</h2>
+        <p>Chime has tens of millions of daily active members. Despite this scale — or partly because of it — member communications became overwhelming and difficult to consume. As Chime grew, communication became increasingly complex, resulting in messages that were inconsistent, unreliable, and often poor quality.</p>
+        <p>The goal: create a new Comms Playbook to bring clarity, consistency, and structure to how we design and deliver member communications.</p>
+      </div>
+    </section>
+
+    <!-- Pull quote -->
+    <blockquote class="cs-quote reveal">
+      <p>"Inconsistent, unreliable, and often poor quality."</p>
+      <cite>— How members described Chime's communications</cite>
+    </blockquote>
+
+    <div class="cs-img-full reveal">
+      <img src="images/comms/Comms_Comp.png" alt="Competitive Analysis" class="cs-img-real">
+    </div>
+
+    <!-- 02 · Discovery -->
+    <section class="cs-section reveal">
+      <div class="cs-section-label">
+        <span class="section-num">02</span>
+        <span class="section-label">Discovery</span>
+      </div>
+      <div class="cs-section-content">
+        <h2 class="cs-heading">Two paths to understanding the problem</h2>
+        <p>Discovery ran in parallel across two tracks to get a complete picture of the problem — internally and externally.</p>
+
+        <div class="cs-cards">
+          <div class="cs-card">
+            <h4>Team Sessions</h4>
+            <p>Led sessions with design, marketing, and product teams to surface current processes, identify what was and wasn't working, understand how success was being measured, and gather performance data across surfaces.</p>
+          </div>
+          <div class="cs-card">
+            <h4>Competitive Analysis</h4>
+            <p>Analyzed Chime's own communications alongside competitors to identify effective vs. ineffective patterns, surface redundancies, and pinpoint areas where guidance was weakest.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image -->
+    <div class="cs-img-pair reveal">
+      <img src="images/comms/Comms_Comp2.png" alt="Discovery Artifact 1" class="cs-img-real">
+      <img src="images/comms/Comms_Comp3.png" alt="Discovery Artifact 2" class="cs-img-real">
+    </div>
+
+    <!-- 03 · Definition -->
+    <section class="cs-section reveal">
+      <div class="cs-section-label">
+        <span class="section-num">03</span>
+        <span class="section-label">Definition</span>
+      </div>
+      <div class="cs-section-content">
+        <h2 class="cs-heading">Five root problems, one system to fix them</h2>
+        <p>Discovery converged on five distinct problems that the playbook needed to solve.</p>
+
+        <div class="cs-findings">
+          <div class="cs-finding">
+            <span class="cs-finding-num">01</span>
+            <p>Too many competing surfaces with poor definition between them</p>
+          </div>
+          <div class="cs-finding">
+            <span class="cs-finding-num">02</span>
+            <p>No stated priority within or across surfaces</p>
+          </div>
+          <div class="cs-finding">
+            <span class="cs-finding-num">03</span>
+            <p>No cap on communications per member</p>
+          </div>
+          <div class="cs-finding">
+            <span class="cs-finding-num">04</span>
+            <p>Inconsistent language and content standards across teams</p>
+          </div>
+          <div class="cs-finding">
+            <span class="cs-finding-num">05</span>
+            <p>Missing guidance on surface performance by use case</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 04 · Surface Ranking System -->
+    <section class="cs-section reveal">
+      <div class="cs-section-label">
+        <span class="section-num">04</span>
+        <span class="section-label">Surface Ranking</span>
+      </div>
+      <div class="cs-section-content">
+        <h2 class="cs-heading">A ranking system for every surface</h2>
+        <p>To bring order to competing surfaces, I created a ranking system that evaluated each communications surface against seven criteria — enabling teams to confidently assign the right surface to any use case.</p>
+        <p>This gave every team a shared framework for decision-making rather than relying on tribal knowledge or gut instinct.</p>
+      </div>
+    </section>
+
+    <!-- Image -->
+    <div class="cs-img-full reveal">
+      <img src="images/comms/comms_sheet.webp" alt="Surface Ranking Framework" class="cs-img-real cs-img-centered" style="width: 75%;">
+    </div>
+
+    <!-- 05 · Four Comms Types -->
+    <section class="cs-section reveal">
+      <div class="cs-section-label">
+        <span class="section-num">05</span>
+        <span class="section-label">Comms Types</span>
+      </div>
+      <div class="cs-section-content">
+        <h2 class="cs-heading">Four types of communication, clearly defined</h2>
+        <p>A core deliverable of the playbook was a taxonomy for all member communications — four types that gave every team a shared vocabulary.</p>
+      </div>
+    </section>
+
+    <div class="cs-concepts cs-concepts--2x2 reveal">
+      <div class="cs-concept">
+        <img src="images/comms/transactional.png" alt="Transactional" class="cs-img-real cs-img-concept">
+        <h4>Transactional</h4>
+        <p>Account-specific information and service availability details that members need to know.</p>
+      </div>
+      <div class="cs-concept">
+        <img src="images/comms/required.png" alt="Required Actions" class="cs-img-real cs-img-concept">
+        <h4>Required Actions</h4>
+        <p>Necessary actions to avoid negative financial consequences or restore full functionality.</p>
+      </div>
+      <div class="cs-concept">
+        <img src="images/comms/announcements.png" alt="Announcements" class="cs-img-real cs-img-concept">
+        <h4>Announcements</h4>
+        <p>Information about new or updated products, services, or opportunities available to members.</p>
+      </div>
+      <div class="cs-concept">
+        <img src="images/comms/recommendations.png" alt="Recommendations" class="cs-img-real cs-img-concept">
+        <h4>Recommendations</h4>
+        <p>Optional suggested actions that offer additional value to members who want to get more from Chime.</p>
+      </div>
+    </div>
+
+    <!-- 06 · Key Learning -->
+    <section class="cs-section reveal">
+      <div class="cs-section-label">
+        <span class="section-num">06</span>
+        <span class="section-label">Key Learning</span>
+      </div>
+      <div class="cs-section-content">
+        <h2 class="cs-heading">Company-wide projects require a different playbook</h2>
+        <p>A previous iteration of this project failed — and understanding why shaped how we approached this one. The lesson was hard-won: a project that impacts every team at the company is anything but straightforward.</p>
+        <p>Success required three things that had been missing before:</p>
+        <ul class="cs-list">
+          <li>Clear executive communication of the project's scope and impact</li>
+          <li>Early cross-functional inclusion, not a late-stage handoff</li>
+          <li>Demonstrable, tangible value delivered to every participating team</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Pull quote -->
+    <blockquote class="cs-quote reveal">
+      <p>"There's no way around it — a project that impacts every team at the company is anything but straightforward."</p>
+      <cite>— Key project learning</cite>
+    </blockquote>
+
+    <!-- 07 · Deliverables -->
+    <section class="cs-section reveal">
+      <div class="cs-section-label">
+        <span class="section-num">07</span>
+        <span class="section-label">Deliverables</span>
+      </div>
+      <div class="cs-section-content">
+        <h2 class="cs-heading">A complete system, not just a document</h2>
+        <p>The Comms Playbook shipped as a comprehensive system spanning multiple workstreams.</p>
+
+        <div class="cs-cards">
+          <div class="cs-card">
+            <h4>The Playbook</h4>
+            <p>Component specifications, content guidelines, tone of voice standards, implementation guides, templates, and usage examples — all in one place.</p>
+          </div>
+          <div class="cs-card">
+            <h4>Custom Comms GPT</h4>
+            <p>A bespoke AI tool trained on the playbook to give teams real-time guidance when creating communications.</p>
+          </div>
+          <div class="cs-card">
+            <h4>Figma Plugin</h4>
+            <p>A plugin that surfaces playbook guidance directly inside Figma, meeting designers where they already work.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="cs-img-pair reveal">
+      <img src="images/comms/decision_tree.png" alt="Decision Tree" class="cs-img-real">
+      <img src="images/comms/commsGPT.webp" alt="Comms GPT" class="cs-img-real">
+    </div>
+
+    <!-- Scrolling image strip -->
+    <div class="cs-scroll-strip reveal">
+      <div class="cs-scroll-track">
+        <img src="images/comms/templates1.png" alt="Template 1">
+        <img src="images/comms/templates2.png" alt="Template 2">
+        <img src="images/comms/templates3.png" alt="Template 3">
+        <img src="images/comms/templates4.png" alt="Template 4">
+        <img src="images/comms/templates5.png" alt="Template 5">
+        <img src="images/comms/templates6.png" alt="Template 6">
+        <img src="images/comms/templates7.png" alt="Template 7">
+        <img src="images/comms/templates8.png" alt="Template 8">
+        <img src="images/comms/templates9.png" alt="Template 9">
+        <!-- Duplicate for seamless loop -->
+        <img src="images/comms/templates1.png" alt="" aria-hidden="true">
+        <img src="images/comms/templates2.png" alt="" aria-hidden="true">
+        <img src="images/comms/templates3.png" alt="" aria-hidden="true">
+        <img src="images/comms/templates4.png" alt="" aria-hidden="true">
+        <img src="images/comms/templates5.png" alt="" aria-hidden="true">
+        <img src="images/comms/templates6.png" alt="" aria-hidden="true">
+        <img src="images/comms/templates7.png" alt="" aria-hidden="true">
+        <img src="images/comms/templates8.png" alt="" aria-hidden="true">
+        <img src="images/comms/templates9.png" alt="" aria-hidden="true">
+      </div>
+    </div>
+
+    <!-- 08 · Measurement -->
+    <section class="cs-section reveal">
+      <div class="cs-section-label">
+        <span class="section-num">08</span>
+        <span class="section-label">Measurement</span>
+      </div>
+      <div class="cs-section-content">
+        <h2 class="cs-heading">How we'll know it's working</h2>
+        <p>We defined three metrics to track the playbook's impact over time.</p>
+
+        <div class="cs-findings">
+          <div class="cs-finding">
+            <span class="cs-finding-num">01</span>
+            <p>Consumption of playbook resources and participation in design reviews</p>
+          </div>
+          <div class="cs-finding">
+            <span class="cs-finding-num">02</span>
+            <p>Recurring member interviews and surveys measuring surface effectiveness</p>
+          </div>
+          <div class="cs-finding">
+            <span class="cs-finding-num">03</span>
+            <p>Comms-focused member NPS surveys tracking overall satisfaction with Chime's communications</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Closing statement -->
+  <div class="cs-closing reveal">
+    <p>System-level design is hard to get right — but when it works, the impact is visible everywhere. This was a challenging, but really satisfying project to lead.</p>
+  </div>
+
+  <!-- ===================== FOOTER NAV ===================== -->
+  <div class="cs-next reveal">
+    <a href="index.html#work" class="cs-back">← All Work</a>
+    <a href="chime-mypay.html" class="cs-next-project">
+      <span class="cs-next-label">Previous Project</span>
+      <span class="cs-next-title">Launching Chime's MyPay Feature →</span>
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

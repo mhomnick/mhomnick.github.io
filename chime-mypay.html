@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Launching Chime's MyPay Feature — Mike Homnick</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- Navigation -->
+  <nav id="nav">
+    <a href="index.html" class="nav-logo">Mike Homnick</a>
+    <div class="nav-links">
+      <a href="index.html#work">Work</a>
+      <div class="nav-dropdown">
+        <span class="nav-dropdown-trigger">Side Projects</span>
+        <div class="nav-dropdown-menu">
+          <div class="nav-dropdown-menu-inner">
+            <a href="game-dev.html">Game Dev</a>
+            <a href="photography.html">Photography</a>
+            <a href="music.html">Music</a>
+          </div>
+        </div>
+      </div>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </div>
+  </nav>
+
+  <!-- ===================== CASE STUDY HERO ===================== -->
+  <header class="cs-hero">
+    <div class="cs-hero-inner">
+      <p class="cs-eyebrow reveal">Case Study · Chime · 2024</p>
+      <h1 class="cs-title reveal">Launching Chime's<br><em>MyPay Feature</em></h1>
+      <div class="cs-meta reveal">
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Role</span>
+          <span class="cs-meta-value">Lead Product Designer</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Timeline</span>
+          <span class="cs-meta-value">6 Months</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Team</span>
+          <span class="cs-meta-value">Content Design, UX Research, PM, Engineering, Risk, Legal</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">My Work</span>
+          <span class="cs-meta-value">Problem Definition, Wireframes, User Research, Visual Design, Prototyping</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero image -->
+  <div class="cs-img-full reveal">
+    <img src="images/Mypay_Hero.png" alt="Chime MyPay Feature" class="cs-img-real">
+  </div>
+
+  <!-- ===================== CONTENT ===================== -->
+  <main class="cs-body">
+
+    <!-- 01 · The Problem -->
+    <section class="cs-section reveal">
+      <div class="cs-section-label">
+        <span class="section-num">01</span>
+        <span class="section-label">The Problem</span>
+      </div>
+      <div class="cs-section-content">
+        <h2 class="cs-heading">Making it to payday</h2>
+        <p>The most pressing challenge for Chime's members involves "making it to payday" — a stress that drives short-term financial decisions that aren't in their best interest, including expensive payday loans, late bill payments, and inefficient purchasing patterns.</p>
+        <p>We identified three goals to address this directly:</p>
+        <ol class="cs-list">
+          <li>Help members receive payment more frequently</li>
+          <li>Allow access to meaningful amounts of earned wages</li>
+          <li>Help regulate spending and improve financial planning</li>
+        </ol>
+        <p>The business committed to serving 100% of members who use direct deposit, requiring a clear path to eligibility for all members — not just a subset.</p>
+
+      </div>
+    </section>
+
+    <!-- Pull quote -->
+    <blockquote class="cs-quote reveal">
+      <p>"Working for eight hours a day every day and not having anything to see for two weeks is hard…"</p>
+      <cite>— Chime Member</cite>
+    </blockquote>
+
+    <!-- 02 · Complexities -->
+    <section class="cs-section reveal">
+      <div class="cs-section-label">
+        <span class="section-num">02</span>
+        <span class="section-label">Complexities</span>
+      </div>
+      <div class="cs-section-content">
+        <h2 class="cs-heading">This wasn't a straightforward build</h2>
+        <p>Three major complexities shaped our approach from the start.</p>
+        <div class="cs-cards">
+          <div class="cs-card">
+            <h4>Two Distinct User Journeys</h4>
+            <p>The experience depended entirely on whether Chime had access to a member's live payroll data — creating two very different flows with different constraints.</p>
+          </div>
+          <div class="cs-card">
+            <h4>Regulatory Ambiguity</h4>
+            <p>The team navigated unclear territory on whether this constituted a loan or credit product — a distinction with significant legal and experience implications.</p>
+          </div>
+          <div class="cs-card">
+            <h4>Payment Variability</h4>
+            <p>Members receive compensation at different times, frequencies, and through different methods, creating numerous edge cases to design for.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image -->
+    <div class="cs-img-full reveal">
+      <div class="cs-img-placeholder">
+        <span>Complexity Mapping / Research Artifacts</span>
+      </div>
+    </div>
+
+    <!-- 03 · Discovery -->
+    <section class="cs-section reveal">
+      <div class="cs-section-label">
+        <span class="section-num">03</span>
+        <span class="section-label">Discovery</span>
+      </div>
+      <div class="cs-section-content">
+        <h2 class="cs-heading">What we learned from members</h2>
+        <p>We conducted member interviews and a competitive analysis to ground the work in real behavior and market context.</p>
+
+        <h3 class="cs-subheading">Member Interviews</h3>
+        <ul class="cs-list">
+          <li>Most members worry about affording necessities every month</li>
+          <li>Immediate access to earned pay ranked as a top priority</li>
+          <li>$200 in accessible earnings would cover necessities for most members</li>
+        </ul>
+
+        <h3 class="cs-subheading">Competitive Analysis</h3>
+        <p>Key learnings shaped our design direction: avoid hour-tracking burdens on the user, manage estimate accuracy carefully, establish clear cash-out UI patterns, and reconsider fee structures relative to competitors.</p>
+      </div>
+    </section>
+
+    <!-- Image pair -->
+    <div class="cs-img-full reveal">
+      <img src="images/Comp.png" alt="Competitive Analysis" class="cs-img-real cs-img-centered">
+    </div>
+
+    <!-- 04 · Experience Principles -->
+    <section class="cs-section reveal">
+      <div class="cs-section-label">
+        <span class="section-num">04</span>
+        <span class="section-label">Experience Principles</span>
+      </div>
+      <div class="cs-section-content">
+        <h2 class="cs-heading">A shared foundation for every decision</h2>
+        <p>Before moving into concepts, the team aligned on a set of experience principles to guide tradeoffs throughout the project. These emphasized clarity, member control, and alignment with Chime's broader financial wellness mission.</p>
+      </div>
+    </section>
+
+    <!-- Image -->
+    <div class="cs-img-full reveal">
+      <img src="images/Principles.jpg" alt="Experience Principles" class="cs-img-real">
+    </div>
+
+    <!-- 05 · Concept Development -->
+    <section class="cs-section reveal">
+      <div class="cs-section-label">
+        <span class="section-num">05</span>
+        <span class="section-label">Concept Development</span>
+      </div>
+      <div class="cs-section-content">
+        <h2 class="cs-heading">Exploring the solution space</h2>
+        <p>Initial wireframing explored divergent approaches — weekly pay access, full earnings access, streamlined cash-out flows, and pay hub alternatives. From this exploration we distilled three testable concepts.</p>
+      </div>
+    </section>
+
+    <!-- 3 concepts -->
+    <div class="cs-concepts reveal">
+      <div class="cs-concept">
+        <img src="images/concepts/weekly pay.png" alt="Weekly Pay Concept" class="cs-img-real cs-img-concept">
+        <h4>Concept 1 — Weekly Pay</h4>
+        <p>Limited access to weekly earnings only, providing a predictable cadence for members.</p>
+      </div>
+      <div class="cs-concept">
+        <img src="images/concepts/all earnings.png" alt="All Earnings Access Concept" class="cs-img-real cs-img-concept">
+        <h4>Concept 2 — All Earnings Access</h4>
+        <p>Members access any accrued earnings at any point, maximizing flexibility and control.</p>
+      </div>
+      <div class="cs-concept">
+        <img src="images/concepts/light touch.png" alt="Light Touch Concept" class="cs-img-real cs-img-concept">
+        <h4>Concept 3 — Fast Cash Out</h4>
+        <p>A streamlined rapid withdrawal process optimized for speed and minimal friction.</p>
+      </div>
+    </div>
+
+    <!-- 06 · Testing -->
+    <section class="cs-section reveal">
+      <div class="cs-section-label">
+        <span class="section-num">06</span>
+        <span class="section-label">Testing</span>
+      </div>
+      <div class="cs-section-content">
+        <h2 class="cs-heading">Three critical learnings</h2>
+        <p>I built prototypes for the concepts to get in front of members and understand comprehension, desirability, and where confusion arose.</p>
+        <div class="cs-findings">
+          <div class="cs-finding">
+            <span class="cs-finding-num">01</span>
+            <p>There's a real opportunity to differentiate MyPay from Chime's existing "get paid 2 days early" offering — members saw them as distinct value propositions.</p>
+          </div>
+          <div class="cs-finding">
+            <span class="cs-finding-num">02</span>
+            <p>Clear labeling of available earnings is essential. Members were confused when the calculation source wasn't transparent.</p>
+          </div>
+          <div class="cs-finding">
+            <span class="cs-finding-num">03</span>
+            <p>Member control over timing, amounts, and frequency wasn't a nice-to-have — it was essential to trust and adoption.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image -->
+    <div class="cs-img-full reveal">
+      <div class="cs-img-placeholder">
+        <span>Usability Testing Clips / Key Screens</span>
+      </div>
+    </div>
+
+    <!-- 07 · North Star -->
+    <section class="cs-section reveal">
+      <div class="cs-section-label">
+        <span class="section-num">07</span>
+        <span class="section-label">North Star Vision</span>
+      </div>
+      <div class="cs-section-content">
+        <h2 class="cs-heading">Telling the story</h2>
+        <p>With insights from testing in hand, I pushed toward the north star experience — exploring what MyPay could feel like at its best before constraints shaped the MVP.</p>
+      </div>
+    </section>
+
+    <!-- 4-up image grid -->
+    <div class="cs-img-4up reveal">
+      <img src="images/northstar/north star 1.png" alt="North Star Screen 1" class="cs-img-real">
+      <img src="images/northstar/north star 2.png" alt="North Star Screen 2" class="cs-img-real">
+      <img src="images/northstar/north star 3.png" alt="North Star Screen 3" class="cs-img-real">
+      <img src="images/northstar/north star 4.png" alt="North Star Screen 4" class="cs-img-real">
+    </div>
+
+    <!-- 08 · Strategic Shift -->
+    <section class="cs-section reveal">
+      <div class="cs-section-label">
+        <span class="section-num">08</span>
+        <span class="section-label">Strategic Shift</span>
+      </div>
+      <div class="cs-section-content">
+        <h2 class="cs-heading">Pivoting to MVP</h2>
+        <p>Leadership redirected focus toward members without live payroll data for the initial launch — a significant constraint that required rethinking large portions of the experience.</p>
+        <p>The north star vision remained intact. The principles we'd established kept the team aligned as we scoped down, ensuring the MVP still felt coherent and on-brand rather than like a half-finished product.</p>
+      </div>
+    </section>
+
+    <!-- Scrolling image strip -->
+    <div class="cs-scroll-strip reveal">
+      <div class="cs-scroll-track">
+        <img src="images/mvp_scroll/mvp_scroll_1.png" alt="MVP Screen 1">
+        <img src="images/mvp_scroll/mvp_scroll_2.png" alt="MVP Screen 2">
+        <img src="images/mvp_scroll/mvp_scroll_3.png" alt="MVP Screen 3">
+        <img src="images/mvp_scroll/mvp_scroll_4.png" alt="MVP Screen 4">
+        <img src="images/mvp_scroll/mvp_scroll_5.png" alt="MVP Screen 5">
+        <img src="images/mvp_scroll/mvp_scroll_6.png" alt="MVP Screen 6">
+        <img src="images/mvp_scroll/mvp_scroll_7.png" alt="MVP Screen 7">
+        <img src="images/mvp_scroll/mvp_scroll_8.png" alt="MVP Screen 8">
+        <img src="images/mvp_scroll/mvp_scroll_9.png" alt="MVP Screen 9">
+        <!-- Duplicate for seamless loop -->
+        <img src="images/mvp_scroll/mvp_scroll_1.png" alt="" aria-hidden="true">
+        <img src="images/mvp_scroll/mvp_scroll_2.png" alt="" aria-hidden="true">
+        <img src="images/mvp_scroll/mvp_scroll_3.png" alt="" aria-hidden="true">
+        <img src="images/mvp_scroll/mvp_scroll_4.png" alt="" aria-hidden="true">
+        <img src="images/mvp_scroll/mvp_scroll_5.png" alt="" aria-hidden="true">
+        <img src="images/mvp_scroll/mvp_scroll_6.png" alt="" aria-hidden="true">
+        <img src="images/mvp_scroll/mvp_scroll_7.png" alt="" aria-hidden="true">
+        <img src="images/mvp_scroll/mvp_scroll_8.png" alt="" aria-hidden="true">
+        <img src="images/mvp_scroll/mvp_scroll_9.png" alt="" aria-hidden="true">
+      </div>
+    </div>
+
+    <!-- 09 · Results -->
+    <section class="cs-section reveal">
+      <div class="cs-section-label">
+        <span class="section-num">09</span>
+        <span class="section-label">Results</span>
+      </div>
+      <div class="cs-section-content">
+        <h2 class="cs-heading">The experience resonated with members</h2>
+        <p>I’m particularly proud of how early feedback from the MVP experience resonated with the experience principles we established. We heard from members that it was a simple experience, helped them to plan ahead, and really felt like they were accessing their own earned money.</p>
+
+        <div class="cs-member-quotes">
+          <blockquote class="cs-member-quote">
+            <p>"Super simple. Especially if you’re in a bind and you need that money, trying to get it fast is really what we’re looking for."</p>
+            <cite>— Chime member</cite>
+          </blockquote>
+          <blockquote class="cs-member-quote">
+            <p>"I think about my check and what plans I have for it…I already know where it’s going before I get it."</p>
+            <cite>— Chime member</cite>
+          </blockquote>
+          <blockquote class="cs-member-quote">
+            <p>"…When you start adding in fees, I think people start to feel like ‘well this is not my money. I’m borrowing’ but it doesn’t feel like that."</p>
+            <cite>— Chime member</cite>
+          </blockquote>
+        </div>
+
+        <p style="margin-top: 48px;">Some early numbers</p>
+        <div class="cs-stats">
+          <div class="cs-stat-card">
+            <span class="cs-stat-num">3M</span>
+            <span class="cs-stat-label">Members accessed their pay</span>
+          </div>
+          <div class="cs-stat-card">
+            <span class="cs-stat-num">$4.2B</span>
+            <span class="cs-stat-label">Total advanced</span>
+          </div>
+          <div class="cs-stat-card">
+            <span class="cs-stat-num">56M</span>
+            <span class="cs-stat-label">Individual advances</span>
+          </div>
+        </div>
+        <div class="cs-stat-card cs-stat-card--wide">
+          <span class="cs-stat-num">530K</span>
+          <span class="cs-stat-label">Members with the feature have no more stress days, when their account is at 0$.</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Closing statement -->
+  <div class="cs-closing reveal">
+    <p>Earned wage access products are not helpful by default — many quite the opposite. More than anything else, seeing this feature resonate with members who need it has really made me proud of the team and the principled approach we took to shipping this work.</p>
+  </div>
+
+  <!-- ===================== FOOTER NAV ===================== -->
+  <div class="cs-next reveal">
+    <a href="index.html#work" class="cs-back">← All Work</a>
+    <a href="#" class="cs-next-project">
+      <span class="cs-next-label">Next Project</span>
+      <span class="cs-next-title">Project Name Two →</span>
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redesigning LendingClub's Member Experience — Mike Homnick</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- Navigation -->
+  <nav id="nav">
+    <a href="index.html" class="nav-logo">Mike Homnick</a>
+    <div class="nav-links">
+      <a href="index.html#work">Work</a>
+      <div class="nav-dropdown">
+        <span class="nav-dropdown-trigger">Side Projects</span>
+        <div class="nav-dropdown-menu">
+          <div class="nav-dropdown-menu-inner">
+            <a href="game-dev.html">Game Dev</a>
+            <a href="photography.html">Photography</a>
+            <a href="music.html">Music</a>
+          </div>
+        </div>
+      </div>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="cs-hero">
+    <div class="cs-hero-inner">
+      <p class="cs-eyebrow reveal">Case Study · LendingClub · 2018</p>
+      <h1 class="cs-title reveal">Redesigning LendingClub's<br><em>Member Experience</em></h1>
+      <div class="cs-meta reveal">
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Role</span>
+          <span class="cs-meta-value">End to End Product Design Lead</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Team</span>
+          <span class="cs-meta-value">Product Manager, Engineering Lead, 6 Engineers</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">My Work</span>
+          <span class="cs-meta-value">UX Research, Interaction Design, Prototyping & Testing, Visual & Motion Design, Handoff & QA</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Impact</span>
+          <span class="cs-meta-value">30% lift in loans to existing customers · LendingClub's first $1B quarter</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero image -->
+  <div class="cs-img-full reveal">
+    <div class="cs-img-placeholder cs-img-hero cs-img-padded">
+      <img src="images/lendingclub/Evolve1.0_animation.gif" alt="Redesigning LendingClub's Member Experience" style="width: 19%; border-radius: 4px;">
+    </div>
+  </div>
+
+  <!-- ===================== CONTENT ===================== -->
+  <main class="cs-body">
+
+    <!-- 01 · Overview -->
+    <section class="cs-section reveal">
+      <div class="cs-section-label">
+        <span class="section-num">01</span>
+        <span class="section-label">Overview</span>
+      </div>
+      <div class="cs-section-content">
+        <h2 class="cs-heading">A next-generation membership experience</h2>
+        <p>I defined, validated, and shipped a next-generation membership experience for LendingClub's 5 million active customers. While I'm proud of the measurable impact this project had on business metrics — a 30% lift in loans issued to existing customers, and LendingClub's first $1B quarter for these types of loans — I'm especially proud of the impact this work had in informing and enabling a customer-focused strategy for LendingClub for 2019 and beyond.</p>
+      </div>
+    </section>
+
+    <!-- Image -->
+    <div class="cs-img-3up reveal" style="width: 50%; margin-left: auto; margin-right: auto;">
+      <img src="images/lendingclub/hero1.png" alt="Member Center 1" class="cs-img-real">
+      <img src="images/lendingclub/hero2.png" alt="Member Center 2" class="cs-img-real">
+      <img src="images/lendingclub/hero3.png" alt="Member Center 3" class="cs-img-real">
+    </div>
+    <div class="cs-img-full reveal">
+      <img src="images/lendingclub/desktop_hero.webp" alt="Member Center Desktop" class="cs-img-real cs-img-centered" style="width: 50%;">
+    </div>
+
+    <!-- 02 · Context -->
+    <section class="cs-section reveal">
+      <div class="cs-section-label">
+        <span class="section-num">02</span>
+        <span class="section-label">Context</span>
+      </div>
+      <div class="cs-section-content">
+        <h2 class="cs-heading">A platform built for transactions, not members</h2>
+        <p>LendingClub is a peer to peer lending marketplace that connects borrowers with investors. They are the market leader in personal loans, having issued more than $15 billion in loans since 2018. </p>
+        <p>To get to where the company was, acquisition and growth were historically the primary focus of the product team's efforts. The result was a transactional and impersonal post-issuance experience with limited value to users. This created a huge experience and business opportunity: build lasting relationships with customers and treat them less like visitors and more like real members.</p>
+      </div>
+    </section>
+
+    <!-- Before image -->
+    <figure>
+      <div class="cs-img-pair reveal" style="width: 50%; margin-left: auto; margin-right: auto; gap: 28px;">
+        <img src="images/lendingclub/accountsummarymobile_old.webp" alt="Account Summary Mobile, 2017" class="cs-img-real">
+        <img src="images/lendingclub/accountsummary_old.webp" alt="Account Summary Desktop, 2017" class="cs-img-real">
+      </div>
+      <figcaption style="width: 50%; margin: 0 auto; padding: 0;">Before and after designs</figcaption>
+    </figure>
+
+    <!-- 03 · Discovery -->
+    <section class="cs-section reveal">
+      <div class="cs-section-label">
+        <span class="section-num">03</span>
+        <span class="section-label">Discovery</span>
+      </div>
+      <div class="cs-section-content">
+        <h2 class="cs-heading">Establishing a baseline</h2>
+        <p>Because this was a true redesign project, it was necessary to establish a baseline understanding of the experience as it existed. I led user testing sessions to identify opportunities and gaps, combining qualitative data with competitive analysis to inform cross-functional brainstorms and workshops with clear goals.</p>
+
+        <div class="cs-cards">
+          <div class="cs-card">
+            <h4>UX Goals</h4>
+            <ul class="cs-list" style="margin-top: 8px;">
+              <li>Simplify loan servicing and payment flows</li>
+              <li>Make it easy to access applications, completed loans, and documents</li>
+              <li>Reduce confusion around late payments and fees</li>
+              <li>Empower members to continue on the right financial path</li>
+            </ul>
+          </div>
+          <div class="cs-card">
+            <h4>Business Goals</h4>
+            <ul class="cs-list" style="margin-top: 8px;">
+              <li>Increase loan volume from existing members</li>
+              <li>Maintain critical loan servicing and collections metrics</li>
+              <li>Build a scalable platform to support new products and experimentation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image -->
+    <div class="cs-img-full reveal">
+      <figure>
+        <img src="images/lendingclub/definition_sketches.webp" alt="Cross-Functional Workshop Sketches" class="cs-img-real cs-img-centered" style="width: 50%;">
+        <figcaption>Sketches and notes from a cross-functional workshop</figcaption>
+      </figure>
+    </div>
+
+    <!-- 04 · Design Vision -->
+    <section class="cs-section reveal">
+      <div class="cs-section-label">
+        <span class="section-num">04</span>
+        <span class="section-label">Design Vision</span>
+      </div>
+      <div class="cs-section-content">
+        <h2 class="cs-heading">A practical north star, built toward incrementally</h2>
+        <p>The workshops provided the inspiration and fuel for ideation. Sketching design ideas allowed me to quickly communicate concepts to stakeholders and get directional feedback early.</p>
+        <p>Many of the concepts reflected significant hurdles in technical capabilities. Since getting stakeholders excited is meaningless if the design isn't feasible to build, I took a practical north star approach: start with the "in a perfect world" design and value prop, then thoughtfully and incrementally build toward it.</p>
+        <p>Our value prop was a broad yet simple echo of our UX goals — <em>empower members to continue on the right path financially after they take their first loan.</em></p>
+      </div>
+    </section>
+
+    <!-- Sketch image grid -->
+    <figure>
+      <div class="cs-img-pair reveal">
+        <div class="cs-img-placeholder cs-img-padded" style="aspect-ratio: unset;">
+          <img src="images/lendingclub/sketches.png" alt="Sketches — Ideation Phase" class="cs-img-real">
+        </div>
+        <div class="cs-img-placeholder cs-img-padded" style="aspect-ratio: unset;">
+          <img src="images/lendingclub/wireframes.png" alt="Wireframe Concepts" class="cs-img-real">
+        </div>
+      </div>
+      <figcaption style="padding: 0 var(--pad-x);">Selection of sketches and wireframe concepts from ideation</figcaption>
+    </figure>
+
+    <!-- 05 · Validation -->
+    <section class="cs-section reveal">
+      <div class="cs-section-label">
+        <span class="section-num">05</span>
+        <span class="section-label">Validation</span>
+      </div>
+      <div class="cs-section-content">
+        <h2 class="cs-heading">Validating a leap of faith with a key test</h2>
+        <p>Before fully committing to the new direction, we needed to validate our assumptions about the structure of the experience and its impact on key metrics. Specifically, we needed to show that the new design didn't negatively impact loan performance.</p>
+        <p>We A/B tested a stripped-down version of the design — one our engineers could build in a single sprint — against the control experience. The hypothesis was that improving navigation, visual hierarchy, and surfacing oft-requested payment information would lift loan applications.</p>
+        <p>In reality, we saw a <strong>15% lift in new loan applications</strong>. This success gave us the validation to continue building toward the north star.</p>
+      </div>
+    </section>
+
+    <!-- Pull quote -->
+    <blockquote class="cs-quote reveal">
+      <p>15% lift in new loan applications — our success metric.</p>
+      <cite>A/B test results validating the new design direction</cite>
+    </blockquote>
+
+    <!-- Experiment image -->
+    <div class="cs-img-full reveal">
+      <img src="images/lendingclub/abtestvscontrol.png" alt="A/B Experiment — Design vs. Control" class="cs-img-real cs-img-centered" style="width: 50%;">
+    </div>
+
+    <!-- 06 · Scalability -->
+    <section class="cs-section reveal">
+      <div class="cs-section-label">
+        <span class="section-num">06</span>
+        <span class="section-label">Scalability</span>
+      </div>
+      <div class="cs-section-content">
+        <h2 class="cs-heading">A modular, scalable foundation</h2>
+        <p>By collaborating closely with engineering, we shipped incremental updates sprint by sprint to what was now gaining recognition internally as the new "Member Center" — a far cry from the transactional post-issuance experience I had inherited.</p>
+        <p>By cutting updates into customer segments, we eventually routed all LendingClub customers to the new Member Center, building in improvements along the way to make payments easier, support customization, and other quality-of-life improvements.</p>
+        <p>By designing the experience as a modular, scalable platform rather than a static account page, we enabled the plug-and-play testing required to learn fast and innovate.</p>
+      </div>
+    </section>
+
+    <!-- UML / modular image -->
+    <div class="cs-img-full reveal">
+      <img src="images/lendingclub/ia.webp" alt="Modular Platform Architecture" class="cs-img-real cs-img-centered" style="width: 50%;">
+    </div>
+
+    <!-- Smart cards image -->
+    <div class="cs-img-full reveal">
+      <figure>
+        <div class="cs-img-placeholder cs-img-padded" style="aspect-ratio: unset;">
+          <img src="images/lendingclub/smartcards.png" alt="Smart Cards" class="cs-img-real cs-img-centered" style="width: 38%;">
+        </div>
+        <figcaption>Smart cards surfaced based on loan status</figcaption>
+      </figure>
+    </div>
+
+    <!-- 07 · Results -->
+    <section class="cs-section reveal">
+      <div class="cs-section-label">
+        <span class="section-num">07</span>
+        <span class="section-label">Results</span>
+      </div>
+      <div class="cs-section-content">
+        <h2 class="cs-heading">LendingClub's first $1B quarter</h2>
+        <p>Thanks to the streamlined user experience, experimentation capability, and flexibility of the new platform, loans issued to existing customers crossed $1 billion in a single quarter for the first time in LendingClub's history — representing 30% growth year over year.</p>
+
+        <div class="cs-stats">
+          <div class="cs-stat-card">
+            <span class="cs-stat-num">30%</span>
+            <span class="cs-stat-label">YOY lift in loans issued to existing customers</span>
+          </div>
+          <div class="cs-stat-card">
+            <span class="cs-stat-num">$1B</span>
+            <span class="cs-stat-label">First $1B quarter for existing-member loans in LendingClub's history</span>
+          </div>
+          <div class="cs-stat-card">
+            <span class="cs-stat-num">15%</span>
+            <span class="cs-stat-label">Lift in new loan applications from the initial A/B validation test</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 · Next Steps -->
+    <section class="cs-section reveal">
+      <div class="cs-section-label">
+        <span class="section-num">08</span>
+        <span class="section-label">What's Next</span>
+      </div>
+      <div class="cs-section-content">
+        <h2 class="cs-heading">Building on the platform</h2>
+        <p>We released LendingClub's first set of financial health tools and trackers onto the platform, and continued to validate new features and additions to the experience.</p>
+        <p>We also worked closely with other product teams to integrate new cross-product experiences, enabling other business units to take advantage of the new platform's capabilities.</p>
+      </div>
+    </section>
+
+    <!-- Final image -->
+    <div class="cs-img-full reveal">
+      <div class="cs-img-placeholder cs-img-hero">
+        <span>Financial Health Tools</span>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Closing statement -->
+  <div class="cs-closing reveal">
+    <p>The most satisfying part of this project wasn't the business metrics — it was proving that a customer-focused strategy and strong business results aren't at odds. They reinforce each other.</p>
+  </div>
+
+  <!-- ===================== FOOTER NAV ===================== -->
+  <div class="cs-next reveal">
+    <a href="index.html#work" class="cs-back">← All Work</a>
+    <a href="chime-mypay.html" class="cs-next-project">
+      <span class="cs-next-label">Next Project</span>
+      <span class="cs-next-title">Launching Chime's MyPay Feature →</span>
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

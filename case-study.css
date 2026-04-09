@@ -1,0 +1,676 @@
+/* ============================================================
+   CASE STUDY — PAGE STYLES
+   Builds on style.css tokens and base styles
+   ============================================================ */
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.cs-hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 140px var(--pad-x) 80px;
+}
+
+.cs-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+.cs-title {
+  font-family: var(--serif);
+  font-size: clamp(52px, 7.5vw, 110px);
+  font-weight: 700;
+  line-height: 0.96;
+  letter-spacing: -0.03em;
+  margin-bottom: 64px;
+  max-width: 1100px;
+}
+
+.cs-title em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.cs-hero-sub {
+  font-size: clamp(16px, 1.4vw, 20px);
+  color: var(--muted-lt);
+  max-width: 600px;
+  margin-top: -40px;
+  margin-bottom: 48px;
+}
+
+.cs-meta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--border);
+  padding-top: 32px;
+  max-width: 1000px;
+}
+
+.cs-meta-item {
+  padding-right: 32px;
+}
+
+.cs-meta-item + .cs-meta-item {
+  border-left: 1px solid var(--border);
+  padding-left: 32px;
+}
+
+.cs-meta-label {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.cs-meta-value {
+  display: block;
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--muted-lt);
+  line-height: 1.6;
+}
+
+/* ============================================================
+   IMAGE BLOCKS
+   ============================================================ */
+.cs-img-full {
+  padding: 0 var(--pad-x);
+  margin: 80px 0;
+}
+
+.cs-img-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 8;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cs-img-real {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.cs-img-centered {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.cs-img-placeholder span {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.cs-img-hero {
+  aspect-ratio: 16 / 7;
+}
+
+.cs-img-padded {
+  padding: 48px;
+}
+
+.cs-img-sm {
+  aspect-ratio: 4 / 3;
+  margin-bottom: 24px;
+}
+
+.cs-img-concept {
+  margin-bottom: 24px;
+}
+
+.cs-img-3up {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 0 var(--pad-x);
+  margin: 80px 0 12px;
+}
+
+@media (max-width: 600px) {
+  .cs-img-3up { grid-template-columns: 1fr; }
+}
+
+.cs-img-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 0 var(--pad-x);
+  margin: 80px 0;
+}
+
+.cs-img-pair .cs-img-placeholder {
+  aspect-ratio: 4 / 3;
+}
+
+/* ============================================================
+   BODY CONTENT
+   ============================================================ */
+.cs-body {
+  padding-bottom: 80px;
+}
+
+/* Section row: label left, content right */
+.cs-section {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 48px;
+  padding: 80px var(--pad-x);
+  border-top: 1px solid var(--border);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.cs-section-label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 6px;
+}
+
+.cs-section-label .section-num {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+}
+
+.cs-section-label .section-label {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.cs-section-content {
+  max-width: 680px;
+}
+
+.cs-heading {
+  font-family: var(--serif);
+  font-size: clamp(28px, 2.8vw, 42px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 28px;
+}
+
+.cs-subheading {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+
+.cs-section-content p {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--muted-lt);
+  line-height: 1.85;
+  margin-bottom: 20px;
+}
+
+.cs-section-content p:last-child {
+  margin-bottom: 0;
+}
+
+.cs-list {
+  margin: 20px 0 20px 20px;
+}
+
+.cs-list li {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--muted-lt);
+  line-height: 1.85;
+  margin-bottom: 8px;
+  padding-left: 8px;
+}
+
+/* ============================================================
+   PULL QUOTE
+   ============================================================ */
+.cs-quote {
+  padding: 80px var(--pad-x);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin: 0 0 0 0;
+  text-align: center;
+}
+
+.cs-quote p {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3.5vw, 52px);
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--text);
+  max-width: 900px;
+  margin: 0 auto 24px;
+}
+
+.cs-quote cite {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-style: normal;
+}
+
+/* ============================================================
+   RESULTS STATS
+   ============================================================ */
+.cs-results-intro {
+  font-size: 14px !important;
+  color: var(--muted-lt) !important;
+  margin-bottom: 16px !important;
+}
+
+.cs-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.cs-stat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cs-stat-card--wide {
+  text-align: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.cs-stat-num {
+  font-family: var(--serif);
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  line-height: 1;
+}
+
+.cs-stat-card .cs-stat-label {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--muted-lt);
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .cs-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   MEMBER QUOTES
+   ============================================================ */
+.cs-member-quotes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 40px;
+}
+
+@media (max-width: 900px) {
+  .cs-member-quotes {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cs-member-quote {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 28px 32px;
+}
+
+.cs-member-quote p {
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  color: var(--text) !important;
+  line-height: 1.7 !important;
+  margin-bottom: 14px !important;
+  font-style: italic;
+}
+
+.cs-member-quote cite {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-style: normal;
+}
+
+/* ============================================================
+   CARDS (Complexities)
+   ============================================================ */
+.cs-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin-top: 36px;
+}
+
+.cs-card {
+  padding: 28px 0;
+  border-top: 1px solid var(--border);
+}
+
+.cs-card:last-child {
+  border-bottom: 1px solid var(--border);
+}
+
+.cs-card h4 {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.cs-card p {
+  font-size: 14px !important;
+  color: var(--muted-lt) !important;
+  line-height: 1.75 !important;
+  margin-bottom: 0 !important;
+}
+
+/* ============================================================
+   CONCEPTS (3-up)
+   ============================================================ */
+.cs-concepts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 0 var(--pad-x);
+  margin: 0 0 80px;
+}
+
+.cs-concepts--2x2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.cs-concept h4 {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+
+.cs-concept p {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--muted-lt);
+  line-height: 1.7;
+}
+
+/* ============================================================
+   4-UP IMAGE GRID
+   ============================================================ */
+.cs-img-4up {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  padding: 0 var(--pad-x);
+  margin: 0 0 80px;
+}
+
+.cs-img-4up .cs-img-placeholder {
+  aspect-ratio: 3 / 4;
+}
+
+@media (max-width: 900px) {
+  .cs-img-4up {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cs-img-4up {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   FINDINGS
+   ============================================================ */
+.cs-findings {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.cs-finding {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 24px;
+  padding: 28px 0;
+  border-top: 1px solid var(--border);
+  align-items: start;
+}
+
+.cs-finding:last-child {
+  border-bottom: 1px solid var(--border);
+}
+
+.cs-finding-num {
+  font-family: var(--serif);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--border);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  padding-top: 4px;
+}
+
+.cs-finding p {
+  font-size: 15px !important;
+  font-weight: 300 !important;
+  color: var(--muted-lt) !important;
+  line-height: 1.8 !important;
+  margin-bottom: 0 !important;
+}
+
+/* ============================================================
+   SCROLLING IMAGE STRIP
+   ============================================================ */
+.cs-scroll-strip {
+  overflow: hidden;
+  margin: 80px 0;
+  padding: 0;
+}
+
+.cs-scroll-track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  animation: scrollTrack 40s linear infinite;
+}
+
+.cs-scroll-track:hover {
+  animation-play-state: paused;
+}
+
+.cs-scroll-track img {
+  height: 480px;
+  width: auto;
+  border-radius: 4px;
+  display: block;
+  flex-shrink: 0;
+}
+
+@keyframes scrollTrack {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ============================================================
+   CAPTIONS
+   ============================================================ */
+figcaption {
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* ============================================================
+   CLOSING STATEMENT
+   ============================================================ */
+.cs-closing {
+  padding: 80px var(--pad-x);
+  border-top: 1px solid var(--border);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.cs-closing p {
+  font-family: var(--serif);
+  font-size: clamp(20px, 2.2vw, 30px);
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  color: var(--muted-lt);
+  max-width: 820px;
+}
+
+/* ============================================================
+   FOOTER NAV
+   ============================================================ */
+.cs-next {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 48px var(--pad-x);
+  border-top: 1px solid var(--border);
+}
+
+.cs-back {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+}
+
+.cs-back:hover {
+  color: var(--text);
+}
+
+.cs-next-project {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  transition: opacity 0.2s;
+}
+
+.cs-next-project:hover {
+  opacity: 0.7;
+}
+
+.cs-next-label {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.cs-next-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 900px) {
+  .cs-meta {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+
+  .cs-meta-item + .cs-meta-item {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .cs-section {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 56px var(--pad-x);
+  }
+
+  .cs-section-label {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    padding-top: 0;
+  }
+
+  .cs-concepts {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .cs-img-pair {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .cs-hero {
+    padding-top: 120px;
+    padding-bottom: 56px;
+  }
+
+  .cs-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-next {
+    flex-direction: column;
+    gap: 32px;
+    align-items: flex-start;
+  }
+
+  .cs-next-project {
+    align-items: flex-start;
+  }
+}
