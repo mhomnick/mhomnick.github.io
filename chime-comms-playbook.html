@@ -80,7 +80,7 @@
         <span class="section-label">The Problem</span>
       </div>
       <div class="cs-section-content">
-        <h2 class="cs-heading">Communications at scale break down</h2>
+        <h2 class="cs-heading">Communication break down at scale</h2>
         <p>Chime has tens of millions of daily active members. Despite this scale — or partly because of it — member communications became overwhelming and difficult to consume. As Chime grew, communication became increasingly complex, resulting in messages that were inconsistent, unreliable, and often poor quality.</p>
         <p>The goal: create a new Comms Playbook to bring clarity, consistency, and structure to how we design and deliver member communications.</p>
       </div>
@@ -174,9 +174,142 @@
       </div>
     </section>
 
-    <!-- Image -->
-    <div class="cs-img-full reveal">
-      <img src="images/comms/comms_sheet.webp" alt="Surface Ranking Framework" class="cs-img-real cs-img-centered" style="width: 75%;">
+    <!-- Surface ranking dot matrix -->
+    <div class="cs-ranking-wrap reveal">
+      <table class="cs-ranking-table">
+        <thead>
+          <tr>
+            <th class="cs-rank-surface">Surface</th>
+            <th>Urgency</th>
+            <th>Importance</th>
+            <th>Actionability</th>
+            <th>Personalization</th>
+            <th>Disruption</th>
+            <th>Persistence</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cs-rank-surface">Home banner</td>
+            <td><span class="dot dot-low"></span></td>
+            <td><span class="dot dot-low"></span></td>
+            <td><span class="dot dot-mid"></span></td>
+            <td><span class="dot dot-mid"></span></td>
+            <td><span class="dot dot-low"></span></td>
+            <td><span class="dot dot-high"></span></td>
+          </tr>
+          <tr>
+            <td class="cs-rank-surface">Inbox</td>
+            <td><span class="dot dot-low"></span></td>
+            <td><span class="dot dot-mid"></span></td>
+            <td><span class="dot dot-mid"></span></td>
+            <td><span class="dot dot-low"></span></td>
+            <td><span class="dot dot-low"></span></td>
+            <td><span class="dot dot-mid"></span></td>
+          </tr>
+          <tr>
+            <td class="cs-rank-surface">Bottom sheet</td>
+            <td><span class="dot dot-mid"></span></td>
+            <td><span class="dot dot-mid"></span></td>
+            <td><span class="dot dot-high"></span></td>
+            <td><span class="dot dot-high"></span></td>
+            <td><span class="dot dot-mid"></span></td>
+            <td><span class="dot dot-low"></span></td>
+          </tr>
+          <tr>
+            <td class="cs-rank-surface">Full screen takeover</td>
+            <td><span class="dot dot-high"></span></td>
+            <td><span class="dot dot-high"></span></td>
+            <td><span class="dot dot-high"></span></td>
+            <td><span class="dot dot-mid"></span></td>
+            <td><span class="dot dot-high"></span></td>
+            <td><span class="dot dot-low"></span></td>
+          </tr>
+          <tr>
+            <td class="cs-rank-surface">SMS</td>
+            <td><span class="dot dot-high"></span></td>
+            <td><span class="dot dot-high"></span></td>
+            <td><span class="dot dot-high"></span></td>
+            <td><span class="dot dot-high"></span></td>
+            <td><span class="dot dot-mid"></span></td>
+            <td><span class="dot dot-mid"></span></td>
+          </tr>
+          <tr>
+            <td class="cs-rank-surface">Push</td>
+            <td><span class="dot dot-mid"></span></td>
+            <td><span class="dot dot-mid"></span></td>
+            <td><span class="dot dot-high"></span></td>
+            <td><span class="dot dot-high"></span></td>
+            <td><span class="dot dot-high"></span></td>
+            <td><span class="dot dot-low"></span></td>
+          </tr>
+          <tr>
+            <td class="cs-rank-surface">Email</td>
+            <td><span class="dot dot-low"></span></td>
+            <td><span class="dot dot-mid"></span></td>
+            <td><span class="dot dot-low"></span></td>
+            <td><span class="dot dot-low"></span></td>
+            <td><span class="dot dot-low"></span></td>
+            <td><span class="dot dot-high"></span></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="cs-ranking-legend">
+        <span><span class="dot dot-high"></span> High</span>
+        <span><span class="dot dot-mid"></span> Medium</span>
+        <span><span class="dot dot-low"></span> Low</span>
+      </div>
+    </div>
+
+    <!-- Use case to surface matrix -->
+    <div class="cs-ranking-wrap reveal">
+      <h3 style="font-family: var(--sans); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 24px;">Some example use cases</h3>
+      <table class="cs-ranking-table cs-usecase-table">
+        <thead>
+          <tr>
+            <th class="cs-rank-surface">Use Case</th>
+            <th style="text-align: left;">Recommended Surface(s)</th>
+            <th style="text-align: left;">Rationale</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cs-rank-surface">Low balance alert</td>
+            <td class="cs-usecase-surfaces"><span class="cs-surface-tag">Push</span><span class="cs-surface-tag">SMS</span></td>
+            <td class="cs-usecase-rationale">Urgent, action needed</td>
+          </tr>
+          <tr>
+            <td class="cs-rank-surface">New feature announcement</td>
+            <td class="cs-usecase-surfaces"><span class="cs-surface-tag">Home banner</span><span class="cs-surface-tag">Inbox</span><span class="cs-surface-tag">Email</span></td>
+            <td class="cs-usecase-rationale">Low urgency, persistence needed, needs to be accessed later</td>
+          </tr>
+          <tr>
+            <td class="cs-rank-surface">Full launch announcement</td>
+            <td class="cs-usecase-surfaces"><span class="cs-surface-tag">Full screen</span><span class="cs-surface-tag">Push</span><span class="cs-surface-tag">Email</span></td>
+            <td class="cs-usecase-rationale">High importance, disruption</td>
+          </tr>
+          <tr>
+            <td class="cs-rank-surface">Fraud alert</td>
+            <td class="cs-usecase-surfaces"><span class="cs-surface-tag">SMS</span><span class="cs-surface-tag">Push</span></td>
+            <td class="cs-usecase-rationale">High urgency, persistence needed, needs to be highly actionable</td>
+          </tr>
+          <tr>
+            <td class="cs-rank-surface">Direct deposit arrived</td>
+            <td class="cs-usecase-surfaces"><span class="cs-surface-tag">Push</span><span class="cs-surface-tag">Email</span></td>
+            <td class="cs-usecase-rationale">Medium urgency, medium importance</td>
+          </tr>
+          <tr>
+            <td class="cs-rank-surface">Referral bonus offer</td>
+            <td class="cs-usecase-surfaces"><span class="cs-surface-tag">Home banner</span><span class="cs-surface-tag">Inbox</span><span class="cs-surface-tag">Push</span></td>
+            <td class="cs-usecase-rationale">Low urgency, persistence needed, needs to be accessed later</td>
+          </tr>
+          <tr>
+            <td class="cs-rank-surface">Recurring transfer failed</td>
+            <td class="cs-usecase-surfaces"><span class="cs-surface-tag">Inbox</span><span class="cs-surface-tag">Email</span></td>
+            <td class="cs-usecase-rationale">Low–medium importance, medium actionability, compliance consideration</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
     <!-- 05 · Four Comms Types -->
