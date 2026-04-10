@@ -99,7 +99,7 @@ body::after {
 .cursor-follower.is-hovered {
   width: 48px;
   height: 48px;
-  border-color: rgba(232, 49, 42, 0.4);
+  border-color: color-mix(in srgb, var(--accent) 40%, transparent);
 }
 
 /* ============================================================
