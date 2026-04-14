@@ -69,8 +69,31 @@ window.addEventListener('scroll', () => {
    HERO: trigger reveals immediately (above the fold)
    ============================================================ */
 window.addEventListener('DOMContentLoaded', () => {
-  const heroReveals = document.querySelectorAll('#hero .reveal');
+  const heroReveals = document.querySelectorAll('#hero .reveal, .cs-hero .reveal');
   heroReveals.forEach((el, i) => {
     setTimeout(() => el.classList.add('visible'), 200 + i * 150);
   });
 });
+
+/* ============================================================
+   HAMBURGER MENU
+   ============================================================ */
+const hamburger = document.getElementById('nav-hamburger');
+const mobileMenu = document.getElementById('nav-mobile-menu');
+
+if (hamburger && mobileMenu) {
+  hamburger.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('is-open');
+    hamburger.classList.toggle('is-open', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  // Close on link click
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('is-open');
+      hamburger.classList.remove('is-open');
+      document.body.style.overflow = '';
+    });
+  });
+}

@@ -700,8 +700,11 @@ figcaption {
   border-bottom: 1px solid var(--border);
 }
 
-.photo-gallery-thumb .cs-img-placeholder {
+.photo-gallery-thumb .cs-img-placeholder,
+.photo-gallery-thumb img {
   aspect-ratio: 4/3;
+  width: 100%;
+  object-fit: cover;
 }
 
 .photo-gallery-info {
