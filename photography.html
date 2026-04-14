@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="icon" type="image/jpeg" href="images/mike.jpg">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="case-study.css">
 </head>
 <body>
 
@@ -29,23 +30,249 @@
           </div>
         </div>
       </div>
-<a href="index.html#contact">Contact</a>
+      <a href="index.html#contact">Contact</a>
       <a href="resume.pdf" target="_blank" rel="noopener">Resume</a>
     </div>
   </nav>
 
-  <section id="hero">
-    <div class="hero-content">
-      <p class="hero-eyebrow reveal">Side Project</p>
-      <h1 class="hero-title reveal">Photography<em>.</em></h1>
-      <p class="hero-sub reveal">Add your description here.</p>
+  <!-- ===================== HERO ===================== -->
+  <header class="cs-hero">
+    <div class="cs-hero-inner">
+      <p class="cs-eyebrow reveal">Side Project</p>
+      <h1 class="cs-title reveal">Photography<em>.</em></h1>
     </div>
-  </section>
+  </header>
 
-  <section style="padding: 80px var(--pad-x);">
-    <div class="reveal" style="color: var(--muted); font-size: 14px;">Content coming soon.</div>
-  </section>
+  <!-- ===================== GALLERIES ===================== -->
+  <main class="cs-body">
+
+    <div class="photo-gallery-list">
+
+      <div class="photo-gallery-item reveal">
+        <div class="photo-gallery-thumb">
+          <img src="images/photography/product/IMG_3608_blur.webp" alt="Product Photography" class="cs-img-real" style="aspect-ratio: 4/3; object-fit: cover;">
+        </div>
+        <div class="photo-gallery-info">
+          <h2 class="photo-gallery-title">Product photography</h2>
+          <p class="photo-gallery-desc">Images from a past life making photos for PCWorld, Macworld, and other publications.</p>
+          <a href="#" class="photo-gallery-link" data-gallery="product">See more →</a>
+        </div>
+      </div>
+
+      <div class="photo-gallery-item reveal">
+        <div class="photo-gallery-thumb">
+          <img src="images/photography/personal/alaska168.webp" alt="Personal Photography" class="cs-img-real" style="aspect-ratio: 4/3; object-fit: cover;">
+        </div>
+        <div class="photo-gallery-info">
+          <h2 class="photo-gallery-title">Personal photography</h2>
+          <p class="photo-gallery-desc">Picks from my personal photography.</p>
+          <a href="#" class="photo-gallery-link" data-gallery="personal">See more →</a>
+        </div>
+      </div>
+
+      <div class="photo-gallery-item reveal">
+        <div class="photo-gallery-thumb">
+          <img src="images/photography/gth/gathering1.webp" alt="Gathering the Harvest" class="cs-img-real" style="aspect-ratio: 4/3; object-fit: cover;">
+        </div>
+        <div class="photo-gallery-info">
+          <h2 class="photo-gallery-title">Gathering the Harvest photo essay</h2>
+          <p class="photo-gallery-desc">A photo essay from time spent documenting a startup religious community in Bellingham, WA.</p>
+          <a href="#" class="photo-gallery-link" data-gallery="harvest">See more →</a>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- ===================== LIGHTBOX ===================== -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close">✕</button>
+    <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous">←</button>
+    <button class="lightbox-next" id="lightbox-next" aria-label="Next">→</button>
+    <div class="lightbox-content">
+      <img class="lightbox-img" id="lightbox-img" src="" alt="">
+    </div>
+    <div class="lightbox-counter" id="lightbox-counter"></div>
+  </div>
 
   <script src="script.js"></script>
+  <script>
+    // =====================================================
+    // GALLERY IMAGES — add image paths here when ready
+    // =====================================================
+    const galleries = {
+      product: [
+        'images/photography/product/IMG_3608_blur.webp',
+        'images/photography/product/Pebble_6.webp',
+        'images/photography/product/CreativeSpaces.webp',
+        'images/photography/product/NotePro_2.webp',
+      ],
+      personal: [
+        'images/photography/personal/alaska168.webp',
+        'images/photography/personal/IMG_8064BW.webp',
+        'images/photography/personal/July-35.webp',
+        'images/photography/personal/new+cam2+034.webp',
+        'images/photography/personal/LZ8A4425.webp',
+        'images/photography/personal/IMG_8188.webp',
+        'images/photography/personal/IMG_5681.webp',
+        'images/photography/personal/Google+I_O_8.webp',
+        'images/photography/personal/IMG_0892.webp',
+        'images/photography/personal/yellow+flower.webp',
+        'images/photography/personal/new+cam2+023.webp',
+        'images/photography/personal/IMG_1455.webp',
+        'images/photography/personal/IMG_9069.webp',
+      ],
+      harvest: [
+        'images/photography/gth/gathering1.webp',
+        'images/photography/gth/gathering2.webp',
+        'images/photography/gth/gathering3.webp',
+        'images/photography/gth/gathering4.webp',
+        'images/photography/gth/gathering5.webp',
+        'images/photography/gth/gathering6.webp',
+        'images/photography/gth/gathering7.webp',
+      ]
+    };
+
+    // =====================================================
+    // LIGHTBOX LOGIC
+    // =====================================================
+    let currentImages = [];
+    let currentIndex = 0;
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCounter = document.getElementById('lightbox-counter');
+    const lightboxClose = document.getElementById('lightbox-close');
+    const lightboxPrev = document.getElementById('lightbox-prev');
+    const lightboxNext = document.getElementById('lightbox-next');
+    const lightboxBackdrop = document.getElementById('lightbox-backdrop');
+
+    function openLightbox(galleryKey, index = 0) {
+      currentImages = galleries[galleryKey];
+      if (!currentImages.length) return;
+      currentIndex = index;
+      showImage();
+      lightbox.classList.add('is-open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('is-open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    function showImage() {
+      lightboxImg.src = currentImages[currentIndex];
+      lightboxCounter.textContent = `${currentIndex + 1} / ${currentImages.length}`;
+      lightboxPrev.style.opacity = currentIndex === 0 ? '0.3' : '1';
+      lightboxNext.style.opacity = currentIndex === currentImages.length - 1 ? '0.3' : '1';
+    }
+
+    function prevImage() {
+      if (currentIndex > 0) { currentIndex--; showImage(); }
+    }
+
+    function nextImage() {
+      if (currentIndex < currentImages.length - 1) { currentIndex++; showImage(); }
+    }
+
+    document.querySelectorAll('.photo-gallery-link').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        openLightbox(link.dataset.gallery);
+      });
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightboxBackdrop.addEventListener('click', closeLightbox);
+    lightboxPrev.addEventListener('click', prevImage);
+    lightboxNext.addEventListener('click', nextImage);
+
+    document.addEventListener('keydown', e => {
+      if (!lightbox.classList.contains('is-open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') prevImage();
+      if (e.key === 'ArrowRight') nextImage();
+    });
+  </script>
+
+  <style>
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox.is-open {
+      display: flex;
+    }
+    .lightbox-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.92);
+    }
+    .lightbox-content {
+      position: relative;
+      z-index: 1;
+      max-width: 90vw;
+      max-height: 88vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox-img {
+      max-width: 90vw;
+      max-height: 88vh;
+      object-fit: contain;
+      border-radius: 2px;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 24px;
+      right: 28px;
+      z-index: 2;
+      background: none;
+      border: none;
+      color: var(--muted);
+      font-size: 20px;
+      cursor: none;
+      padding: 8px;
+      transition: color 0.2s;
+    }
+    .lightbox-close:hover { color: var(--text); }
+    .lightbox-prev,
+    .lightbox-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 24px;
+      cursor: none;
+      padding: 16px;
+      transition: opacity 0.2s;
+    }
+    .lightbox-prev { left: 24px; }
+    .lightbox-next { right: 24px; }
+    .lightbox-counter {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+    }
+  </style>
+
 </body>
 </html>
