@@ -12,8 +12,8 @@
   --surface:  #111111;
   --border:   #1c1c1c;
   --text:     #efefef;
-  --muted:    #717171;
-  --muted-lt: #aaaaaa;
+  --muted:    #8c8c8c;
+  --muted-lt: #c8c8c8;
   --accent:   #fbff00;
 
   --serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
@@ -412,7 +412,7 @@ body::after {
   color: var(--muted-lt);
   line-height: 1.75;
   max-width: 640px;
-  font-weight: 300;
+  font-weight: 400;
   transition-delay: 0.35s;
 }
 
@@ -686,7 +686,7 @@ body::after {
 
 .project-desc {
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--muted-lt);
   line-height: 1.8;
   margin-bottom: 32px;
@@ -749,7 +749,7 @@ body::after {
 
 .about-left p {
   font-size: 15px;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--muted-lt);
   line-height: 1.85;
   margin-bottom: 18px;
@@ -819,7 +819,7 @@ body::after {
 
 .skills-col li {
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--muted-lt);
   padding: 10px 0;
   border-bottom: 1px solid var(--border);
@@ -866,7 +866,7 @@ body::after {
 .contact-email {
   display: inline-block;
   font-size: clamp(18px, 2.4vw, 28px);
-  font-weight: 300;
+  font-weight: 400;
   color: var(--muted-lt);
   margin-bottom: 48px;
   padding-bottom: 20px;
